@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.opower.unitsofmeasure</groupId>
+    <artifactId>jackson-module-unitsofmeasure</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.1</version>
+
+    <name>Jackson Unit of Measure Module</name>
+    <description>Contains custom serializers and deserializers for org.unitsofmeasure classes.</description>
+
+    <repositories>
+        <repository>
+            <id>jscience-local-repo</id>
+            <name>Local repository for the "5.0-opower" JScience version we depend on</name>
+            <url>https://github.com/opower/jackson-module-unitsofmeasure/raw/master/repo</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- =========================================================================================================== -->
+        <!-- The units of measurement interface is in the org.unitsofmeasurement package.                                -->
+        <!-- The implementation is provided by JScience                                                                  -->
+        <!-- =========================================================================================================== -->
+        <dependency>
+            <groupId>org.unitsofmeasurement</groupId>
+            <artifactId>unit-api</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jscience</groupId>
+            <artifactId>jscience-physics</artifactId>
+            <version>5.0-opower</version>
+        </dependency>
+
+        <!-- =========================================================================================================== -->
+        <!-- Jackson library for JSON-parsing                                                                            -->
+        <!-- =========================================================================================================== -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
