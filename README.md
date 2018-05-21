@@ -1,6 +1,9 @@
 jackson-module-unitsofmeasure
 =============================
 
+This project is no longer actively maintained.  Please refer to https://github.com/unitsofmeasurement/jackson-module-unitsofmeasure in its place.
+
+
 Contains custom serializers and deserializers for org.unitsofmeasure classes.
 
 This was built with a custom `5.0-opower` version of JScience, which is provided in a local Maven repository, located in the
